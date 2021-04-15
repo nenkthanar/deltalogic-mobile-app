@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar color="success">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+  <p>รอคำสั่งเสียง :  {{ isListening }}</p>
+  <ion-button (click)="getPermission()">ใช้ไมโครโฟน</ion-button>
+  
+  <ion-button (click)="listen()">
+    <div>
+      <ion-icon name="mic">
+        <label>Speak to me</label>
+      </ion-icon>
+    </div>
+  </ion-button>
+
+  <ion-card>
+    <ion-card-content *ngFor="let match of matches">
+      <p>{{ match }}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

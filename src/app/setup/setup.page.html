@@ -1,0 +1,32 @@
+<ion-header >
+  <ion-toolbar  color="success">
+  <ion-buttons slot="start">
+  <ion-menu-button></ion-menu-button>
+  <ion-title></ion-title>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br><br>
+<ion-card>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-label>
+        Token
+      </ion-label>
+      <ion-input placeholder ="Auth token" [(ngModel)] = "app_token">
+      </ion-input>
+    </ion-col>
+  </ion-row><br><br><br>
+  <ion-row>
+    <ion-col>
+        <ion-button class = "gen" (click) = "generate()">Generate</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class = "gen" (click) = "generate()">Email</ion-button>
+  </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-card>
+</ion-content>

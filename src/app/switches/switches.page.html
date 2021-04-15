@@ -1,0 +1,65 @@
+<ion-header >
+<ion-toolbar  color="success">
+<ion-buttons slot="start">
+<ion-menu-button></ion-menu-button>
+</ion-buttons>
+<!--a class="chbutton" id="button" (click)="background_change()"></a-->
+<ion-buttons slot="end" (click)="listen()" color="success">
+    <ion-icon name="mic" style="padding-left: 11px;">
+    </ion-icon>
+</ion-buttons>
+</ion-toolbar>
+</ion-header>
+<ion-content >
+<div id="main">
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+<ion-icon name="play" color="success" id="play"  style="margin:auto">
+</ion-icon> <ion-icon name="settings" color="success" id="set"  style="margin:auto">
+</ion-icon>
+  <ion-select  [(ngModel)]="mode" style="color: blanchedalmond" (ionChange) = "setMode()" >
+  <ion-select-option value="Run" >Run</ion-select-option >
+  <ion-select-option value ="Setup" >Set</ion-select-option>
+  </ion-select>
+</ion-item>
+</ion-col>
+<ion-col>
+  <ion-item>
+  <ion-icon name="switch" color="success" id="play" style="margin:auto">
+  </ion-icon>
+  <ion-select  style="color: blanchedalmond;margin-right: 30px" [(ngModel)]="switch" (ionChange) ="change_btnum()" >
+  <ion-select-option value ="4" >4</ion-select-option >
+  <ion-select-option value ="6" >6</ion-select-option>
+   </ion-select>
+  </ion-item>
+</ion-col>
+</ion-row>
+</ion-grid>
+  <ion-label id="bt1-name">{{buttons[0].btnName[0]}}</ion-label>
+    <div id="switch1"  > 
+    <button id="button1" (click)="Action('btn1')" (click)="presentPrompt('button1')" ></button>
+    </div>
+    <ion-label id="bt2-name">{{buttons[0].btnName[1]}}</ion-label>
+    <div id="switch2" >
+    <button id="button2" (click)="Action('btn2')" (click)="presentPrompt('button2')"></button>
+    </div>
+    <ion-label id="bt3-name">{{buttons[0].btnName[2]}}</ion-label>
+    <div id="switch3" >
+    <button id="button3" (click)="Action('btn3')"  (click)="presentPrompt('button3')"></button>
+    </div>
+    <ion-label id="bt4-name">{{buttons[0].btnName[3]}}</ion-label>
+    <div id="switch4">
+    <button id="button4" (click)="Action('btn4')"   (click)="presentPrompt('button4')"></button>
+    </div>
+    <ion-label id="bt5-name">{{buttons[0].btnName[4]}} </ion-label>
+    <div id="switch5"  > 
+    <button id="button5" (click)="Action('btn5')" (click)="presentPrompt('button5')" ></button>
+    </div>
+    <ion-label id="bt6-name">{{buttons[0].btnName[5]}}</ion-label>
+    <div id="switch6" >
+    <button id="button6" (click)="Action('btn6')" (click)="presentPrompt('button6')"></button>
+    </div>
+    </div>
+  </ion-content> 

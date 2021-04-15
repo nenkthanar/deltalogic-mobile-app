@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+ion-content{
+  font-family: "Poppins", sans-serif;
+}
+
+ion-buttons{
+  border-radius: 3px;
+  text-align: center;
+  width: 40px;
+  color: white;
+  height: 40px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+h4{
+ text-align: center;
+}
+
+ion-content{
+ --background:rgba(212, 218, 212, 0.226);
+}
+
+ion-buttons:hover{
+  cursor: pointer;
+}
+
+.status{
+ margin-top: 5px;
+ text-align: center;
+ z-index: 60;
+}
+
+.add{
+  padding-left: 13px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.dev{
+  width: 80px;
+  height: 120px;
+  text-align: center;
+  border: none;
+}
+
+.bin{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  color:rgb(247, 49, 15);
+  font-size: 28px;
+  border-radius: 3px;
+}
+
+.setting{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  color:rgb(9, 9, 184);
+  font-size: 28px;
+  border-radius: 3px;
+}
+
+.dev-object{
+  margin: auto;
+  width: 80px;
+  height: 50px;
+  font-size: 15px;
+  padding-top: 10px;
+  background: url(../../assets/img/hardware.png) center no-repeat;
+  z-index: 60;
+  }
+
+.dev-name{
+  color: rgb(10, 14, 243);
+}
+
+.dev-object:hover{
+  cursor: pointer;
+  }
+
+ion-footer{
+  text-shadow:0 1px 0 hsl(174,5%,80%),
+  0 2px 0 hsl(174,5%,75%),
+  0 3px 0 hsl(174,5%,70%),
+  0 4px 0 hsl(174,5%,66%),
+  0 0 5px rgba(0,0,0,.05),
+  0 1px 3px rgba(0,0,0,.2),
+  0 3px 5px rgba(0,0,0,.2)
+}
+.remain{
+  margin: auto;
+}
+
+ion-toolbar{
+  --background:rgba(212, 218, 212, 0.226);
+}
+
+ion-card{  
+  text-align: center;
+}
+
+ion-row{
+  text-align: center;
+}
+.connect{
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  border-radius: 3px;
+  text-align: center;
+  width: 100px;
+  color: white;
+  height: 40px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.exit{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 3px;
+  text-align: center;
+  width: 70px;
+  color: white;
+  height: 40px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+
+.box span{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  position: absolute;
+}
+
+.box span:nth-child(2){
+  top: 2px;
+  left: 125px;
+}
+
+.box span:nth-child(7){
+  top: 85px;
+  left: 125px;
+}
+
+.box span:nth-child(12){
+  top: 165px;
+  left: 125px;
+}
+
+.server{
+  position: absolute;
+  width: 70px;
+  height: 45px;
+  left: 5px;
+  bottom: 6px;
+  border-radius: 5px;
+  background: #6a9797;
+}
+
+.server ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.server:first-child ul li{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 12px;
+  margin-top: 20px;
+  background: rgba(29, 33, 238, 0.6);
+}
+
+.server ul li:first-child{
+  -webkit-animation: pattern1 0.5s linear infinite;
+}
+
+.server ul li:nth-child(2){
+  -webkit-animation: pattern1 0.5s 0.1s linear infinite;
+}
+
+.server ul li:last-child{
+  -webkit-animation: pattern1 0.5s 0.15s linear infinite;
+}
+
+@-webkit-keyframes pattern1{
+  0%{
+    background: white;
+  }
+  100%{
+    background: rgb(21, 252, 0);
+  }
+}
+
+

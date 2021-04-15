@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+    <ion-menu-button class="menu"></ion-menu-button>
+    </ion-buttons>
+    <span class="sensor">{{sensor1}}</span>
+    <ion-buttons slot="end">
+      <ion-button class="settings" (click)="goControler()"><ion-icon name="settings"></ion-icon></ion-button>
+      </ion-buttons>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+ <div style="background-color: rgba(42, 44, 42, 0.514)">
+  <div style="text-align: center;padding-top:10px;color:white;"><span>{{sensor[0]}}</span><span id="analog"></span></div>
+  <div style ="padding-top: 10px;">
+ <canvas id="myChart" height="200vh"></canvas>
+</div>
+ <br>
+ </div>
+</ion-card>
+ <ion-card>
+   <ion-item>
+    <ion-select  [(ngModel)]="sensor[0]"  (ionChange) = "setSensor()">
+      <ion-select-option value ="CH1">CH1</ion-select-option>
+      <ion-select-option value ="CH2">CH2</ion-select-option>
+      <ion-select-option value ="CH3">CH3</ion-select-option>
+      <ion-select-option value ="CH4">CH4</ion-select-option>
+      <ion-select-option value ="CH5">CH5</ion-select-option>
+      <ion-select-option value ="CH6">CH6</ion-select-option>
+    </ion-select>
+   </ion-item>
+  <ion-item >
+    <ion-range min="0" max="1000" class="min" [(ngModel)] = "dev[0].min">
+      <ion-label slot="start">Min</ion-label>
+      <ion-label slot="end">{{dev[0].min}}</ion-label>
+    </ion-range>
+  </ion-item>
+  <ion-item >
+    <ion-range min="0" max="1000" class="max" [(ngModel)] = "dev[0].max">
+      <ion-label slot="start">Max</ion-label>
+      <ion-label slot="end">{{dev[0].max}}</ion-label>
+    </ion-range>
+  </ion-item>
+  <ion-item>
+    <ion-grid>
+    </ion-grid>
+    </ion-item>
+    </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar style="text-align:center;">
+    <ion-button class = "home" (click) = "gohome()"><ion-icon name ="home"></ion-icon></ion-button>
+    <ion-button class = "exit" (click) = "exitConfirm()"><ion-icon name ="power"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-footer>

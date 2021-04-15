@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+    <ion-button (click) = "goGraph()" class="back"><ion-icon name="arrow-back"></ion-icon></ion-button>
+    </ion-buttons>
+    <h4>Program block</h4>
+    <ion-buttons slot="end">
+      <ion-buttons class = "add" (click) = "addNew()">+</ion-buttons>
+      </ion-buttons>
+</ion-toolbar>
+</ion-header>
+<ion-content forceOverscroll="false">
+  <ion-grid>
+  <ion-row>
+    <ion-col *ngFor = "let item of program;let i = index" [attr.data-index]="i">
+      <div class="block">
+      <div class="prog-name">
+      {{item.name}}
+      </div>
+      <div class="setting" (click) = "selectOpt(i)">
+      <ion-icon name="settings"></ion-icon>
+      </div>
+      <div class="bin" (click)="deleteProg(i)">
+      <ion-icon name="trash"></ion-icon>
+      </div>
+    </div>
+      </ion-col>
+  </ion-row>
+  </ion-grid>
+ 
+</ion-content>
+<ion-footer>
+  <ion-toolbar style="text-align:center;">
+    <ion-button class = "save" (click) = "saveConfirm()"><ion-icon name ="save"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-footer>

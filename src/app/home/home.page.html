@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <h4>Online Device</h4>
+    <ion-buttons slot="end">
+    <ion-buttons class = "add" (click) = "addNew()">+</ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+  <ion-content>
+    <ion-grid>
+    <ion-row>
+    <ion-col *ngFor = "let item of dev_list;let i = index" [attr.data-index]="i">
+    <ion-card class="dev">
+    <span class="dev-name">{{item.Name}}</span>
+    <div class="dev-object" (click) = "selectDev(i)" >
+    </div>
+    <div class ="status" id={{item.Name}}>Offline!</div>
+    <div class="setting" (click) = "setting(i)">
+    <ion-icon name="settings"></ion-icon>
+    </div>
+    <div class="bin" (click)="deleteDev(i)">
+    <ion-icon name="trash"></ion-icon>
+    </div>
+    </ion-card>
+    </ion-col>
+    </ion-row>
+    </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar style="text-align:center;">
+    <div class="server" id="server">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div  class = "reamin" id="remain"></div>
+    <ion-button class = "exit" (click) = "exitConfirm()"><ion-icon name ="power"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-footer>
